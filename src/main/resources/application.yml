@@ -1,0 +1,18 @@
+aws:
+  accesskey: AKIAS53KNBTZR3D6YQEG
+  secretkey: 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
+
+server:
+  port: 8081
+
+jwt:
+  secret: 1o$0j$+coa$mn@$s1vk0xg6v
+  accessexpiration: 1800
+  refreshexpiration: 3600
+
+kafka:
+  topic:
+    name: tweetTopic
+  group:
+    id: userTweets
+ 
