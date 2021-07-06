@@ -9,10 +9,21 @@ jwt:
   secret: 1o$0j$+coa$mn@$s1vk0xg6v
   accessexpiration: 1800
   refreshexpiration: 3600
-
+  
 kafka:
   topic:
     name: tweetTopic
-  group:
-    id: userTweets
+
+spring: 
+  kafka: 
+    consumer: 
+      auto-offset-reset: earliest
+      bootstrap-servers: kafka:9093
+      group-id: userTweets
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer: 
+      bootstrap-servers: kafka:9093
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
  

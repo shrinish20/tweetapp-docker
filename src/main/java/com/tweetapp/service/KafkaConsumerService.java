@@ -9,7 +9,7 @@ public class KafkaConsumerService {
 	
 	public static Logger log = Logger.getLogger(KafkaConsumerService.class);
 	
-	@KafkaListener(topics = "${kafka.topic.name}", groupId = "${kafka.group.id}", containerFactory = "concurrentKafkaListenerContainerFactory")
+	@KafkaListener(topics = "${kafka.topic.name}", id = "userTweets")
 	public void consumeMessage(String msg) {
 		log.info("Consuming Messages using Listener :::::: {} " + msg);		
 	}
